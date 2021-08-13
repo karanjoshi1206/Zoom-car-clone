@@ -1,0 +1,456 @@
+$width: 990px;
+@mixin mobile {
+	@media (max-width:#{$width}) {
+		@content;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+$navColor: #33414f;
+
+body {
+	background-color: #eee;
+	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Helvetica, Arial, sans-serif !important;
+}
+.navBar {
+	display: flex;
+	padding: 10px 20px;
+	background-color: $navColor;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.nav_left {
+		img {
+			height: 40px;
+			width: 150px;
+
+			object-fit: contain;
+			filter: invert(2);
+		}
+	}
+	.nav_right {
+		.menu {
+			li {
+				display: inline;
+				a {
+					text-decoration: none;
+					margin: 0 10px;
+					font-size: 20px;
+					color: white;
+					text-transform: uppercase;
+				}
+				@include mobile {
+					display: block;
+					margin: 30px 0;
+				}
+			}
+			@include mobile {
+				background-color: $navColor;
+				top: 50px;
+				position: fixed;
+				right: -300px;
+				transition: 0.5s ease;
+				&.active {
+					right: 0;
+				}
+			}
+		}
+	}
+}
+.fa-bars {
+	color: white;
+	font-size: 20px;
+	display: none;
+	@include mobile {
+		display: block;
+	}
+}
+.hero {
+	height: 88.6vh;
+	background-image: linear-gradient(
+			45deg,
+			rgba(0, 0, 0, 0.1),
+			rgba(75, 75, 75, 0.664)
+		),
+		url("./images/banner.jpg");
+	background-repeat: no-repeat;
+	background-position: 50%, center;
+	background-size: cover;
+	overflow: hidden;
+	.hero_content {
+		height: inherit;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		h1 {
+			color: white;
+			letter-spacing: 2px;
+			font-size: 40px;
+			@include mobile {
+				text-align: center;
+				margin-bottom: 10px;
+				font-size: 25px;
+			}
+		}
+		p {
+			color: white;
+			font-size: 20px;
+			@include mobile {
+				font-size: 20px;
+			}
+			select {
+				background: none;
+				border: none;
+				color: white;
+				border-bottom: 1px solid white;
+				outline: none;
+				option {
+					color: black;
+				}
+			}
+		}
+		div {
+			background-color: white;
+			padding: 15px 10px;
+			border-radius: 10px;
+			width: 500px;
+			font-size: 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@include mobile {
+				width: 300px;
+			}
+			p {
+				color: black;
+			}
+		}
+	}
+}
+
+.zoom_container {
+	h2 {
+		text-align: center;
+		margin: 20px 0;
+		font-size: 23px;
+		color: rgb(88, 88, 88);
+	}
+	p {
+		text-align: center;
+	}
+	a {
+		text-decoration: none;
+		margin-left: 50%;
+		color: black;
+		border: 1px solid black;
+		padding: 5px 20px;
+		display: inline;
+	}
+	.zoom_container_cards {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 10px 100px;
+		@include mobile {
+			padding: 0;
+		}
+		.zoom_card {
+			height: 200px;
+			width: 300px;
+			background-color: #fff;
+			margin: 10px 0;
+			padding: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: 0.5s ease;
+			@include mobile {
+				width: 90vw;
+			}
+			i {
+				font-size: 30px;
+				color: rgb(138, 252, 138);
+				margin-bottom: 10px;
+			}
+			h4 {
+				font-size: 20px;
+				font-weight: 400;
+				color: rgb(0, 211, 0);
+			}
+			p {
+				font-size: 15px;
+			}
+
+			&:hover {
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+.supermilers {
+	background-image: linear-gradient(
+			45deg,
+			rgba(0, 0, 0, 0.445),
+			rgba(32, 32, 32, 0.884)
+		),
+		url("./images/bg.jpg");
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	img {
+		margin: 20px 0 10px;
+		height: 60px;
+	}
+	h3 {
+		color: white;
+		font-size: 25px;
+	}
+	p {
+		color: white;
+	}
+
+	div {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		h4 {
+			color: rgb(158, 157, 157);
+			font-size: 15px;
+		}
+		span {
+			height: 2px;
+			border-radius: 10px;
+			margin-bottom: 7px;
+			width: 30px;
+			background-color: white;
+		}
+	}
+	.supermilers_card {
+		position: absolute;
+		bottom: -100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 250px;
+		background-color: #eee;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+		padding-bottom: 20px;
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+
+			width: inherit;
+			padding: 10px 0;
+			p {
+				color: black;
+				text-align: center;
+			}
+			i {
+				font-size: 30px;
+				color: rgb(138, 252, 138);
+				margin: 10px 0;
+			}
+		}
+		p {
+			color: black;
+			text-align: center;
+			font-size: 13px;
+		}
+		button {
+			padding: 10px 20px;
+			outline: none;
+			border: 2px solid black;
+			border-radius: 10px;
+		}
+	}
+}
+
+.cars {
+	margin-top: 110px;
+	height: 500px;
+	background-image: url("./images/car_bg.jpg");
+	background-position: center;
+	h2 {
+		text-align: center;
+		color: white;
+		padding: 30px 0 10px;
+		@include mobile {
+			font-size: 20px;
+		}
+	}
+	P {
+		text-align: center;
+		color: white;
+		@include mobile {
+			font-size: 15px;
+		}
+	}
+	h1 {
+		text-align: center;
+		color: white;
+		padding-top: 30px;
+		@include mobile {
+			padding-top: 0;
+			font-size: 20px;
+		}
+	}
+	.car_content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include mobile {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.left {
+			img {
+				height: 200px;
+				margin: 0 40px;
+				@include mobile {
+					height: 150px;
+					margin: 0;
+				}
+			}
+		}
+		.right {
+			margin-left: 320px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			color: white;
+			@include mobile {
+				margin-left: 20px;
+			}
+		}
+		p {
+			text-align: left;
+			width: 90%;
+			@include mobile {
+				width: 100%;
+			}
+		}
+	}
+}
+.zoom_app {
+	height: 100vh;
+	background-image: linear-gradient(
+			45deg,
+			rgba(121, 121, 121, 0.445),
+			rgba(32, 32, 32, 0.884)
+		),
+		url("./images/app_bg.jpg");
+	background-size: cover;
+	background-position: center;
+	margin: 20px 0;
+	padding: 200px 140px;
+	@include mobile {
+		padding: 50px 20px;
+	}
+	h4,
+	p {
+		color: white;
+	}
+	img {
+		height: 100px;
+		object-fit: cover;
+		cursor: pointer;
+		transition: 0.5s;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+.zoom_data {
+	display: flex;
+	padding: 20px 0;
+	align-items: center;
+	@include mobile {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.data_card {
+		width: 300px;
+		height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		margin: 0 10px;
+		i {
+			font-size: 35px;
+			color: rgb(0, 211, 0);
+			margin-bottom: 10px;
+		}
+		h3 {
+			margin: 20px 0;
+		}
+		p {
+			text-align: center;
+		}
+	}
+}
+.zoom_shorthands {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #264666bd;
+	@include mobile {
+		flex-direction: column;
+	}
+	.shorthand {
+		width: 300px;
+		height: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		transition: 0.5s ease;
+		@include mobile {
+			border-bottom: 2px solid #264666bd;
+		}
+		i {
+			color: white;
+			border: 1px solid white;
+			border-radius: 50%;
+			padding: 10px;
+		}
+		h4 {
+			color: white;
+			font-weight: lighter;
+			font-size: 20px;
+			margin-top: 10px;
+		}
+		&:hover {
+			background-color: #253341;
+		}
+	}
+}
+.footer {
+	background-color: $navColor;
+	color: white;
+	.nav-item a {
+		color: white;
+	}
+}

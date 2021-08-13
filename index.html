@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Zoom-Car</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav class="navBar">
+			<div class="nav_left">
+				<img src="/images/logo.png" alt="" />
+			</div>
+			<div class="nav_right">
+				<ul id="menu" class="menu">
+					<li><a href="#">offers</a></li>
+					<li>
+						<a
+							data-bs-placement="bottom"
+							data-bs-toggle="tooltip"
+							data-bs-html="true"
+							title="
+                            <h6>Subcribe</h6>
+                            <p>Hassle-free way of getting your personal car for flexible long term duration. You also have an   option to share your car with other Zoomcar   customers & save up to 70% of the monthly subscription fee.</p>
+                            "
+							href="#"
+							>subscription</a
+						>
+					</li>
+					<li>
+						<a
+							data-bs-placement="bottom"
+							data-bs-toggle="tooltip"
+							data-bs-html="true"
+							title="
+                        <h6>Amigo</h6>
+                        <p>
+                            A unique Community Vehicle Pooling program that allows you to share your car with your community and friends while the car not in use and earn money.</p>
+                        "
+							href="#"
+							>amigo</a
+						>
+					</li>
+					<li>
+						<a
+							data-bs-placement="bottom"
+							data-bs-toggle="tooltip"
+							data-bs-html="true"
+							title="
+                        <h6>Zoom mobility Services</h6>
+                        <p>Connected technology offerings and shared mobility solutions for businesses worldwide..</p>
+                        "
+							href="#"
+							>zms</a
+						>
+					</li>
+					<li><a href="#">mobile app</a></li>
+					<li><a href="#">sign up</a></li>
+					<li><a href="#">login</a></li>
+				</ul>
+			</div>
+			<i onclick="toogleMenu()" class="fas fa-bars"></i>
+		</nav>
+
+		<div class="hero">
+			<div class="hero_content">
+				<h1>DRIVE IN A SANITISED ZOOMCAR</h1>
+				<p>
+					Self Drive Car Rental in
+					<span>
+						<select name="" id="">
+							<option value="pune">Pune</option>
+							<option value="pune">Maharastra</option>
+							<option value="pune">Delhi</option>
+							<option value="pune">ChandiGarh</option>
+						</select>
+					</span>
+				</p>
+
+				<div>
+					<span> Start your wonderful journey </span
+					><i class="fas fa-greater-than"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="zoom_container">
+			<h2>THE ZOOMCAR ADVANTAGE</h2>
+			<p>
+				We simplified car rentals, so you can focus on what's important to you.
+			</p>
+			<div class="zoom_container_cards">
+				<div class="zoom_card">
+					<i class="fas fa-gas-pump"></i>
+					<h4>Fuel Cost Included</h4>
+					<p>
+						Don't worry about mileage! All fuel costs are included. If you
+						refill fuel, we'll pay you back
+					</p>
+				</div>
+				<div class="zoom_card">
+					<i class="fas fa-search"></i>
+					<h4>No Hidden Charges</h4>
+					<p>
+						Our prices include taxes and insurance. What you see is what you
+						really pay!
+					</p>
+				</div>
+				<div class="zoom_card">
+					<i class="fas fa-gifts"></i>
+					<h4>Flexi Pricing Packages</h4>
+					<p>
+						One size never fits all! Choose a balance of time and kilometers
+						that works best for you.
+					</p>
+				</div>
+				<div class="zoom_card">
+					<i class="fas fa-map-marker-alt"></i>
+					<h4>Go Anywhere</h4>
+					<p>
+						Our cars have all-India permits. Just remember to pay state tolls
+						and entry taxes.
+					</p>
+				</div>
+				<div class="zoom_card">
+					<i class="fas fa-road"></i>
+					<h4>24x7 Roadside Assistance</h4>
+					<p>
+						We have round-the-clock, pan India partners. Help is never far away
+						from you.
+					</p>
+				</div>
+				<div class="zoom_card">
+					<i class="fas fa-car-crash"></i>
+					<h4>Damage Insurance</h4>
+					<p>
+						All your bookings include damage insurance! Drive safe, but don’t
+						worry!
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="supermilers">
+			<img
+				src="https://www.zoomcar.com/build/img/supermiler_logo.03d80d443b6753b6827f98ccf6ab30da.svg"
+				alt=""
+			/>
+			<h3>SUPERMILER CLUB</h3>
+			<p>Premium club which rewards you everytime you drive with us</p>
+			<div>
+				<span></span>
+				<h4>SUPERMILER PRIVILEGES</h4>
+				<span></span>
+			</div>
+			<div class="supermilers_card">
+				<div>
+					<i class="fab fa-bitcoin"></i>
+					<p>EARN Z POINTS</p>
+				</div>
+
+				<p>
+					Earn Z-Points for every booking and redeem for additional discount
+				</p>
+				<button>Learn More</button>
+			</div>
+		</div>
+		<div class="cars">
+			<h2>A CAR FOR EVERY NEED</h2>
+			<p>We have a range of cars, so something will perfectly fit your trip</p>
+			<div class="car_content">
+				<div class="left">
+					<img src="/images/car1.png" alt="" />
+				</div>
+				<div class="right">
+					<h1>SUV</h1>
+					<h4>Price Starting at ₹ 80/hr (Fuel Free)</h4>
+					<p>
+						CARS AVAILABLE: FORD ECOSPORT, MAHINDRA SCORPIO, FORD ENDEAVOUR,
+						FORD ECOSPORT AT, HYUNDAI CRETA, TOYOTA FORTUNER
+					</p>
+				</div>
+			</div>
+			<h1>Head outstation with the entire family</h1>
+		</div>
+
+		<div class="zoom_container">
+			<h2>HOW ZOOMCAR WORKS</h2>
+			<p>Drive yourself to an adventure and back in 5 simple steps</p>
+			<div class="zoom_container_cards">
+				<div class="zoom_card">
+					<i class="fas fa-car-side"></i>
+					<h4>BOOK</h4>
+					<p>Search for and book a car on our site!</p>
+				</div>
+				<div class="zoom_card">
+					<i class="fas fa-id-badge"></i>
+					<h4>UPLOAD LICENSE</h4>
+					<p>Upload your driver’s license, and pay a small security deposit.</p>
+				</div>
+				<div class="zoom_card">
+					<i class="fas fa-unlock"></i>
+					<h4>UNLOCK</h4>
+					<p>
+						We SMS your car details 20 minutes before pickup.Unlock it via the
+						Zoomcar app.
+					</p>
+				</div>
+				<div class="zoom_card">
+					<i class="fas fa-car-side"></i>
+					<h4>ZOOM</h4>
+					<p>
+						Fill the start checklist in the Zoomcar app. Grab the keys from the
+						glove-box and drive.
+					</p>
+				</div>
+				<div class="zoom_card">
+					<i class="fas fa-undo-alt"></i>
+					<h4>RETURN</h4>
+					<p>
+						Return the car to the same location and fill the end checklist to
+						end your trip.
+					</p>
+				</div>
+			</div>
+			<a href="#">SIGN UP</a>
+		</div>
+		<div class="zoom_app">
+			<h4>ZOOM ON THE GO!</h4>
+			<p>
+				Make a booking, unlock your car, and end your reservation all from our
+				app
+			</p>
+			<img
+				src="https://www.freepnglogos.com/uploads/google-play-png-logo/get-it-on-google-play-google-play-badge-png-logos-23.png"
+				width="200"
+				alt="get it on google play, google play badge png logos"
+			/>
+			<img src="/images/app_store.png" alt="" />
+		</div>
+		<div class="zoom_data">
+			<div class="data_card">
+				<i class="fas fa-dharmachakra"></i>
+				<h3>3000+</h3>
+				<p>Rides Daily</p>
+			</div>
+			<div class="data_card">
+				<i class="fas fa-grin-alt"></i>
+				<h3>48,00,000+</h3>
+				<p>Happy users</p>
+			</div>
+			<div class="data_card">
+				<i class="fas fa-tachometer-alt"></i>
+				<h3>36,00,00,000+</h3>
+				<p>Km Travelled (enough for 470 round trips to the moon!)</p>
+			</div>
+			<div class="data_card">
+				<i class="fas fa-car-alt"></i>
+				<h3>6,500+</h3>
+				<p>Number of Zoomcars</p>
+			</div>
+
+			<div class="data_card">
+				<div>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i
+					><i class="fas fa-star"></i><i class="fas fa-star"></i
+					><i class="fas fa-star"></i>
+				</div>
+
+				<h3>3000+</h3>
+				<p>Rides Daily</p>
+			</div>
+		</div>
+		<div class="zoom_shorthands">
+			<div class="shorthand">
+				<i class="fas fa-question"></i>
+				<h4>How zoomcar works</h4>
+			</div>
+			<div class="shorthand">
+				<i class="far fa-file-alt"></i>
+				<h4>Policies</h4>
+			</div>
+			<div class="shorthand">
+				<i class="fas fa-headset"></i>
+				<h4>Help Support</h4>
+			</div>
+			<div class="shorthand">
+				<i class="fas fa-shield-alt"></i>
+				<h4>Zoom In Safety</h4>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<footer class="py-5">
+					<div class="row">
+						<h5 class="text-center">About Us</h5>
+						<div class="col-3">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">ZoomCar team</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Location and Cars</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-3">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">ZoomCar Subscription</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Self Drive Cars</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-3">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">ZoomCar Blogs</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Invest via OurCrowd</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-3">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Career @Zoomcar</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br /><br />
+					<div class="row">
+						<h5 class="text-center">Cites</h5>
+						<div class="col-4">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Home</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Features</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Pricing</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">FAQs</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">About</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-4">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Home</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Features</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Pricing</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">FAQs</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">About</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-4">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Home</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Features</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Pricing</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">FAQs</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">About</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br /><br />
+					<div class="row">
+						<h5 class="text-center">Airport Services</h5>
+						<div class="col-4">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Home</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Features</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Pricing</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">FAQs</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">About</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-4">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Home</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Features</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Pricing</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">FAQs</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">About</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-4">
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Home</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Features</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">Pricing</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">FAQs</a>
+								</li>
+								<li class="nav-item mb-2">
+									<a href="#" class="nav-link p-0">About</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="d-flex justify-content-between py-4 my-4 border-top">
+						<p>© 2021 Company, Inc. All rights reserved.</p>
+						<ul class="list-unstyled d-flex">
+							<li class="ms-3">
+								<a class="link-dark" href="#"
+									><svg class="bi" width="24" height="24">
+										<use xlink:href="#twitter"></use></svg
+								></a>
+							</li>
+							<li class="ms-3">
+								<a class="link-dark" href="#"
+									><svg class="bi" width="24" height="24">
+										<use xlink:href="#instagram"></use></svg
+								></a>
+							</li>
+							<li class="ms-3">
+								<a class="link-dark" href="#"
+									><svg class="bi" width="24" height="24">
+										<use xlink:href="#facebook"></use></svg
+								></a>
+							</li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			var tooltipTriggerList = [].slice.call(
+				document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			);
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+				return new bootstrap.Tooltip(tooltipTriggerEl);
+			});
+		</script>
+		<script src="/index.js"></script>
+	</body>
+</html>
